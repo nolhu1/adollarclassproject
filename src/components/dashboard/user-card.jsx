@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
 
-export default function UserCard({ user }) {
+export default function UserCard({ user, onClick }) {
   return (
     <Card sx={{ width: 345, height: 500, display: 'flex', flexDirection: 'column', boxShadow: 3, borderRadius: 3 }}>
       <CardMedia
@@ -15,7 +15,7 @@ export default function UserCard({ user }) {
       />
       <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'space-between', flex: 1, gap: 2, paddingX: 4 }}>
         <Box>
-          <Typography gutterBottom variant="h5" component="div" sx={{ height: 30, textOverflow: 'ellipsis', overflow: 'hidden' }}>
+          <Typography gutterBottom variant="h5" component="div" sx={{ height: 30, textOverflow: 'ellipsis', overflow: 'hidden', cursor: 'pointer' }} onClick={() => onClick(user)}>
             {user.nickname}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary', height: 60, textOverflow: 'ellipsis', overflow: 'hidden' }}>

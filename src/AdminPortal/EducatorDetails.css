@@ -1,0 +1,136 @@
+.details {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f8fafc;
+  height: 100vh; /* take full screen */
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* Back button */
+.back-btn {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #0d1b2a;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+.back-btn:hover {
+  background: #1b263b;
+}
+
+/* Layout wrapper (Info + Schedule side by side) */
+.details-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* info takes 2/3, schedule 1/3 */
+  gap: 25px;
+  overflow: hidden;
+}
+
+/* Header at top */
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  border-radius: 14px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+.details-pfp {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+.details h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+/* Left column - educator info */
+.details-info {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  padding: 20px 25px;
+  overflow-y: auto; /* scroll inside if needed */
+}
+.details-info p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #374151;
+}
+.details-info strong {
+  color: #0d1b2a;
+}
+
+/* Right column - schedule */
+.details-schedule {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  padding: 20px 25px;
+  overflow-y: auto;
+}
+.details-schedule h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0d1b2a;
+}
+.details-schedule ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.details-schedule li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+  color: #374151;
+}
+.details-schedule li:last-child {
+  border-bottom: none;
+}
+
+/* Action buttons row */
+.details-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.accept-btn,
+.reject-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.accept-btn {
+  background: #4CAF50;
+  color: white;
+}
+.accept-btn:hover {
+  background: #43a047;
+}
+.reject-btn {
+  background: #e53935;
+  color: white;
+}
+.reject-btn:hover {
+  background: #c62828;
+}

@@ -7,12 +7,19 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from './pages/dashboard';
+import Signup from './pages/signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<App />} />
+    <Route path='/dashboard' element= {<Dashboard />} />
+    <Route path='/signup' element= {<Signup />} /> 
+  </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

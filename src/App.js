@@ -1,16 +1,20 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AdminPortal from "./AdminPortal/AdminPortal";
 import EducatorDetails from "./AdminPortal/EducatorDetails";
+import Dashboard from "./pages/dashboard";
+import SignUp from "./pages/signup";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AdminPortal />} />
-        <Route path="/educator/:id" element={<EducatorDetails />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/admin" element={<AdminPortal />} />
+      <Route path="/educator/:id" element={<EducatorDetails />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/signup" element={<SignUp />} />
+    </Routes>
   );
 }
 

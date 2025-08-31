@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
-import NavMenu from "../components/dashboard/nav-menu";
+import NavMenu from "../Components/dashboard/nav-menu";
 import { useEffect, useState } from "react";
 import { getEducators, getMetors, getCounselors } from "../utils/data";
-import CardGroup from "../components/dashboard/card-group";
-import UserModal from "../components/dashboard/modal";
+import CardGroup from "../Components/dashboard/card-group";
+import UserModal from "../Components/dashboard/modal";
 
 export default function Dashboard() {
     const [selectedTab, setSelectedTab] = useState('educators');

@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Card, Chip, Modal, Typography } from "@mui/material";
+import { Avatar, Box, Button, Card, Chip, Divider, Modal, Typography } from "@mui/material";
 import { Star } from "@mui/icons-material";
 
 export default function UserModal({ user, onClose }) {
@@ -36,6 +36,7 @@ export default function UserModal({ user, onClose }) {
                     <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
                         EXPERIENCE
                     </Typography>
+                    <Divider />
                     <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mt: 2 }}>
                         {user.experience.map((ex) => <Chip label={ex} color="primary" variant="outlined" />)}
                     </Box>
@@ -44,6 +45,7 @@ export default function UserModal({ user, onClose }) {
                     <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
                         QUALLIFICATIONS
                     </Typography>
+                    <Divider />
                     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 2 }}>
                         {user.qualifications}
                     </Typography>
@@ -52,6 +54,7 @@ export default function UserModal({ user, onClose }) {
                     <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
                         ACHEIVEMENTS
                     </Typography>
+                    <Divider />
                     <Box sx={{ gap: 1, paddingX: 2 }}>
                         {user.acheivements.map((acheivement) =>
                             <Typography variant="body2" sx={{ color: 'text.secondary', mt: 2 }} component={'li'}>
@@ -64,6 +67,7 @@ export default function UserModal({ user, onClose }) {
                     <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
                         REVIEWS
                     </Typography>
+                    <Divider />
                     <Box sx={{ display: "flex", gap: 2, flexDirection: "column", mt: 2 }}>
                         {user.reviews.map((review) =>
                             <Box sx={{ display: "flex", flexDirection: "column" }}>

@@ -27,14 +27,14 @@ export default function UserModal({ user, onClose }) {
                         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                             {user.specialty}
                         </Typography>
-                        <Typography variant="h5" sx={{ fontWeight: 'bold', fontFamily: 'sans-serif, outfit' }}>
+                        <Typography variant="h5" sx={{ fontFamily: 'sans-serif, outfit' }}>
                             {user.price}$
                         </Typography>
                     </Box>
                 </Box>
                 <Box>
-                    <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
-                        EXPERIENCE
+                    <Typography gutterBottom component="div" sx={{ fontFamily: 'raleway', fontWeight: 'bold', fontSize: '20px', }}>
+                        Experience
                     </Typography>
                     <Divider />
                     <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mt: 2 }}>
@@ -42,8 +42,8 @@ export default function UserModal({ user, onClose }) {
                     </Box>
                 </Box>
                 <Box>
-                    <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
-                        QUALLIFICATIONS
+                    <Typography gutterBottom component="div" sx={{ fontFamily: 'raleway', fontWeight: 'bold', fontSize: '20px', }}>
+                        Qualifications
                     </Typography>
                     <Divider />
                     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 2 }}>
@@ -51,8 +51,8 @@ export default function UserModal({ user, onClose }) {
                     </Typography>
                 </Box>
                 <Box>
-                    <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
-                        ACHEIVEMENTS
+                    <Typography gutterBottom component="div" sx={{ fontFamily: 'raleway', fontWeight: 'bold', fontSize: '20px', }}>
+                        Acheivements
                     </Typography>
                     <Divider />
                     <Box sx={{ gap: 1, paddingX: 2 }}>
@@ -64,8 +64,8 @@ export default function UserModal({ user, onClose }) {
                     </Box>
                 </Box>
                 <Box>
-                    <Typography gutterBottom component="div" sx={{ fontFamily: 'Nova Slim', fontStyle: 'normal', fontWeight: 400, fontSize: '18px', }}>
-                        REVIEWS
+                    <Typography gutterBottom component="div" sx={{ fontFamily: 'raleway', fontWeight: 'bold', fontSize: '20px', }}>
+                        Reviews
                     </Typography>
                     <Divider />
                     <Box sx={{ display: "flex", gap: 2, flexDirection: "column", mt: 2 }}>

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import NavMenu from "../Components/dashboard/nav-menu";
 import { useEffect, useState } from "react";
-import { getEducators, getMetors, getCounselors, getConversationalists, getTrainersCoach } from "../utils/data";
+import { getEducators, getMetors, getCounselors, getConversationalists, getTrainersCoach, getIBAREs } from "../utils/data";
 import CardGroup from "../Components/dashboard/card-group";
 import UserModal from "../Components/dashboard/modal";
 
@@ -16,7 +16,8 @@ export default function Dashboard() {
         const counselors = await getCounselors();
         const conversationalist = await getConversationalists();
         const trainersCoach = await getTrainersCoach();
-        setData({ educators, mentors, counselors, conversationalist, trainersCoach });
+        const iBAREs = await getIBAREs();
+        setData({ educators, mentors, counselors, conversationalist, trainersCoach, iBAREs });
     }
     useEffect(() => {
         getData();
@@ -31,6 +32,7 @@ export default function Dashboard() {
             {selectedTab === 'counselors' && <CardGroup users={data.counselors} onUserClick={(user) => setSelectedUser(user)} />}
             {selectedTab === 'conversationalists' && <CardGroup users={data.conversationalist} onUserClick={(user) => setSelectedUser(user)} />}
             {selectedTab === 'trainers/coach' && <CardGroup users={data.trainersCoach} onUserClick={(user) => setSelectedUser(user)} />}
+            {selectedTab === 'iBARE' && <CardGroup users={data.iBAREs} onUserClick={(user) => setSelectedUser(user)} />}
         </Box>
     );
 }

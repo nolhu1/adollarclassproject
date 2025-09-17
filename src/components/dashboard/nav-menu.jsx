@@ -28,12 +28,16 @@ export default function NavMenu({selectedTab, onSelectTab}) {
         <ListItemText primary="Counselors" />
       </ListItemButton>
       <Divider component="li" />
+      <ListItemButton selected={selectedTab === 'trainers/coach'} onClick={() => onSelectTab('trainers/coach')}>
+        <ListItemText primary="Trainers/Coach" />
+      </ListItemButton>
+      <Divider component="li" />
       <ListItemButton selected={selectedTab === 'conversationalists'} onClick={() => onSelectTab('conversationalists')}>
         <ListItemText primary="Conversationalists" />
       </ListItemButton>
       <Divider component="li" />
-      <ListItemButton selected={selectedTab === 'trainers/coach'} onClick={() => onSelectTab('trainers/coach')}>
-        <ListItemText primary="Trainers/Coach" />
+      <ListItemButton selected={selectedTab === 'iBARE'} onClick={() => onSelectTab('iBARE')}>
+        <ListItemText primary="iBARE" />
       </ListItemButton>
     </List>
   );

@@ -22,6 +22,30 @@ export async function getMetors(){
     });
 }
 
+export async function getConversationalists(){
+    return Array(6).fill({
+        nickname: 'Conversationalist',
+        avatar: 'https://randomuser.me/api/portraits/med/men/75.jpg',
+        price: 1,
+        experience: ['React', 'Angular', 'Vue', 'Java', 'C#', 'Python'],
+        specialty: 'Frontend Developer',
+        qualifications: 'ISTQB Foundation Level, Agile Tester, Scrum Master, SAFe Agilist, ITIL Foundation Certificate',
+        review: 5
+    });
+}
+
+export async function getTrainersCoach(){
+    return Array(6).fill({
+        nickname: 'Trainer Coach',
+        avatar: 'https://randomuser.me/api/portraits/med/men/75.jpg',
+        price: 1,
+        experience: ['React', 'Angular', 'Vue', 'Java', 'C#', 'Python'],
+        specialty: 'Frontend Developer',
+        qualifications: 'ISTQB Foundation Level, Agile Tester, Scrum Master, SAFe Agilist, ITIL Foundation Certificate',
+        review: 5
+    });
+}
+
 export async function getCounselors(){
     return Array(6).fill({
         nickname: 'Counselor',

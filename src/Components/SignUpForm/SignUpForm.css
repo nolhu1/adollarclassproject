@@ -1,310 +1,375 @@
-.container {
-    background-color: #9dc8c9;
-    padding: 20px;
-    flex: 1 1 600px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    box-sizing: border-box;
-    z-index: 10;
+.form-container {
+    width: 65%;
+    display: flex;
 }
 
-.main-container {
+form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin-top: 1rem;
+    padding: 20px 10px 50px 80px;
+
 }
 
-.right-pic {
-    flex: 1 1 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+input:focus {
+    border-color: #000;
 }
 
-.right-pic img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0 20px 20px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    border: 5px solid #1d3557;
-    object-fit: cover;
-    margin-right: 40px;
+input::placeholder {
+    color: #252525;
+    font-size: 14px;
 }
 
 .header {
+    padding: 20px 0 20px 4px;
+}
+
+.header h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 750;
+}
+
+.header p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 1em;
+}
+
+.input-row-1 {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    gap: 40px;
+
+}
+
+.input-row-1 input {
+    width: 380px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.input-row-1 label {
+    flex-grow: 1;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.input-row-2 {
+    display: flex;
+    gap: 40px;
+}
+
+.input-row-2 input {
+    width: 380px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.input-row-2 label {
+    flex-grow: 1;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+.input-row-3 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
-    margin-top: 30px;
-}
-
-.text {
-    font-size: 48px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #1d3557;
-    text-align: center;
-}
-
-.underline {
-    width: 100px;
-    background: #1d3557;
-    height: 5px;
-    border-radius: 10px;
-}
-
-.inputs {
-    margin: 20px auto 0 auto;
     width: 100%;
-    max-width: 550px;
-}
-
-.inputs>label {
-    font-size: 20px;
-    color: #0D141A;
-    font-weight: 400;
-    margin-bottom: 10px;
 
 }
 
-.inputs>input {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
+
+
+
+
+input,
+select {
     border: none;
-    padding: 15px 18px;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-top: 4px;
-    margin-bottom: 15px;
-}
-
-.inputs>input,
-.dropdown>select,
-.bio>input,
-.resume>input,
-.certifications>input,
-.identity>input {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
+    border-bottom: 1px solid #484848;
+    padding: 8px 0;
     outline: none;
+    transition: border-color 0.3s;
+    background: transparent;
+    width: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+}
+
+.input-row-4 {
+    display: flex;
+    gap: 40px;
+    width: 802px;
+}
+
+.input-row-4 textarea {
     border: none;
-    padding: 15px 18px;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-top: 4px;
-    margin-bottom: 15px;
-}
-
-.error {
-    color: #e63946;
-    font-size: 0.85rem;
-    font-weight: 600;
-    display: block;
-    margin-top: -13px;
-    margin-bottom: 10px;
-}
-
-.dropdown {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.dropdown>label {
-    font-size: 20px;
-    color: #0D141A;
-    font-weight: 400;
-}
-
-.dropdown>select {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
+    border-bottom: 1px solid #484848;
+    padding: 8px 0;
     outline: none;
-    border: none;
-    padding: 15px 18px;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-top: 4px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: #fff url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 15px center;
-    background-size: 24px;
-    padding-right: 45px;
+    transition: border-color 0.3s;
+    background: transparent;
+    width: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
 }
 
-.bio {
+textarea::placeholder {
+    color: #252525;
+
+}
+
+.input-row-5 {
+    display: flex;
+    gap: 40px;
+}
+
+.input-col {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    gap: 6px;
+
 }
 
-.bio>label {
-    font-size: 20px;
-    color: #0D141A;
-    font-weight: 400;
+.input-col label {
+    font-size: 13px;
+    color: #252525;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.bio>textarea {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
+.input-col input[type="file"] {
+    font-size: 12px;
     border: none;
-    padding: 15px 18px;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-top: 4px;
-    resize: vertical;
+    padding: 8px 0;
+    border-bottom: 1px solid #484848;
+    width: 380px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.resume-input {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
+.input-row-6 {
     display: flex;
+    gap: 6px;
+    flex: 1;
     flex-direction: column;
-    color: #0D141A;
-    font-weight: 400;
-    margin-bottom: 15px;
 }
 
-.resume-input input[type="file"] {
-    font-size: 18px;
+.input-row-6 label {
+    font-size: 13px;
+    color: #252525;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.resume>label {
-    font-size: 20px;
-    color: #0D141A;
-    font-weight: 400;
+.input-row-6 input[type="file"] {
+    font-size: 12px;
+    border: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #484848;
+    width: 802px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .have-account {
-    font-size: 18px;
-    color: #0D141A;
-    margin-top: 10px;
+    width: 97%;
     display: flex;
     justify-content: flex-end;
+    font-size: 14px;
+    color: #252525;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .have-account span {
-    color: #02439f;
-    font-weight: 400;
-    margin-left: 5px;
+    margin-left: 10px;
+    color: blue;
     cursor: pointer;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
     background-color: #1d3557;
     color: #ffffff;
-    padding: 15px 18px;
+    padding: 10px;
     border-radius: 30px;
     text-align: center;
-    font-size: 20px;
-    margin-top: 35px;
+    font-size: 17px;
+    margin-top: 25px;
     cursor: pointer;
-    width: 100%;
+    width: 30%;
     border: none;
     outline: none;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.certifications {
+
+.btn button:hover {
+    background-color: #0a49c6;
+}
+
+.form-img {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
 }
 
-.certifications>label {
-    font-size: 20px;
-    color: #0D141A;
+.form-img img {
+    width: 400px;
+    height: 320px;
+}
+
+.error {
+    color: #ff0419;
+    font-size: 0.85rem;
     font-weight: 400;
-}
-
-.certification-input {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
     display: flex;
-    flex-direction: column;
-    color: #0D141A;
-    font-weight: 400;
-    margin-bottom: 15px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
 }
 
-.certification-input input[type="file"] {
-    font-size: 18px;
+.input-row-5 .input-col .error {
+    margin-top: -5px;
 }
 
-.identity {
-    display: flex;
-    flex-direction: column;
-
+.input-row-6 .row-6-input .error {
+    margin-top: -1px;
 }
 
-.identity>label {
-    font-size: 20px;
-    color: #0D141A;
-    font-weight: 400;
+.input-row-1 .error {
+    margin-top: -1px;
 }
 
-.id-card-input {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    color: #0D141A;
-    font-weight: 400;
-    margin-bottom: 15px;
+.input-row-2 .error {
+    margin-top: -1px;
 }
 
-.id-card-input input[type="file"] {
-    font-size: 18px;
-}
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 50px 0 20px 4px;
+    }
 
+    .header h2 {
 
-@media (max-width: 480px) {
-    .text {
+        font-size: 60px;
+    }
+
+    .header p {
+        font-size: 30px;
+    }
+
+    .form-img {
+        display: none;
+    }
+
+    .input-row-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 6rem;
+    }
+
+    .input-row-1 input {
+        width: 650px;
         font-size: 26px;
     }
 
-    .inputs>input,
-    .dropdown>select,
-    .bio>textarea {
-        font-size: 16px;
-        padding: 12px 14px;
+    .input-row-1 input::placeholder {
+        font-size: 20px;
     }
 
-    .main-container {
+    .input-row-1 label {
+        flex-grow: 1;
+    }
+
+    .input-row-2 {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 40px;
+        margin-top: 1rem;
     }
 
-    .right-pic {
-        display: none;
+    .input-row-2 input {
+        width: 650px;
+        font-size: 20px;
     }
 
-    .right-pic img {
-        display: none;
+    .input-row-2 input::placeholder {
+        font-size: 20px;
     }
 
-    .btn {
-        font-size: 16px;
-        padding: 10px 14px;
+    .input-row-2 label {
+        flex-grow: 1;
+    }
+
+    .input-row-3 {
+        margin-top: 1rem;
+        width: 650px;
+    }
+
+    select:invalid {
+        font-size: 20px;
+        color: #252525;
+    }
+
+    select:valid {
+        font-size: 20px;
+        color: #252525;
+    }
+
+    .input-row-4 {
+        margin-top: 1rem;
+    }
+
+    .input-row-4 textarea {
+        width: 100%;
+        font-size: 20px;
+        width: 650px;
+    }
+
+    textarea::placeholder {
+        color: #252525;
+    }
+
+    .input-row-5 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .input-row-6 {
+        margin-top: 1rem;
+    }
+
+    .input-row-5 .input-col input {
+        width: 650px;
+    }
+
+    .input-row-6 .row-6-input input {
+        width: 650px;
     }
 
     .have-account {
-        font-size: 16px;
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
     }
+
+    .error {
+        color: #ff0419;
+        font-size: 0.85rem;
+        font-weight: 400;
+        display: flex;
+        margin-top: -10px;
+        margin-right: 160px;
+        margin-bottom: 5px;
+
+    }
+
 }

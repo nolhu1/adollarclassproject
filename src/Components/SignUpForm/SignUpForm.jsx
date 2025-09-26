@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './SignUpForm.css'
-import educatorImg from './Image/educator.jpg';
+import image from '../../assets/Img-1.png'
+import { useState } from 'react'
+const SignupForm = () => {
 
-const SignUpForm = () => {
     const [FormData, setFormData] = useState({
         username: '',
         email: '',
@@ -126,143 +127,119 @@ const SignUpForm = () => {
         }
     };
 
+
+
     return (
-        <form onSubmit={handleSubmit}>
-            <div className='main-container'>
-                <div className='container'>
-                    <div className='header'>
-                        <div className='text'>Register</div>
-                        <div className='underline'></div>
-                    </div>
+        <div className='form-container'>
 
-                    <div className='inputs'>
-                        <label>Your Full Name </label>
-                        <input
-                            name='username'
-                            type='text'
-                            placeholder='Full Name'
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
 
+            <form onSubmit={handleSubmit}>
+                <div className="header">
+                    <h2>Registration Form</h2>
+                    <p>Fill out the required fields to register yourself!</p>
+                </div>
+
+                <div className="input-row-1">
+                    <label>
+                        <input type="text" placeholder="Your Full Name" name='username' required onChange={handleChange}
+                            onBlur={handleBlur} />
                         {Errors.username && <span className="error">{Errors.username}</span>}
-                        <label>Your Email Address</label>
-                        <input
-                            name='email'
-                            type='email'
-                            placeholder='Email'
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
+                    </label>
+
+
+                    <label>
+                        <input type="email" placeholder="Email Address" name='email' required onChange={handleChange}
+                            onBlur={handleBlur} />
                         {Errors.email && <span className="error">{Errors.email}</span>}
+                    </label>
+                </div>
 
-                        <label>Your Password</label>
-                        <input
-                            name='password'
-                            type='password'
-                            placeholder='Password'
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                        />
+                <div className="input-row-2">
+                    <label>
+                        <input type='password' placeholder='Password' name='password' required onChange={handleChange}
+                            onBlur={handleBlur} />
                         {Errors.password && <span className="error">{Errors.password}</span>}
+                    </label>
 
-                        <label>Phone Number</label>
+                    <label>
+                        <input type='text' placeholder='Contact Number' name='phone' required onChange={handleChange}
+                            onBlur={handleBlur} />
+                        {Errors.phone && <span className="error">{Errors.phone}</span>}
+                    </label>
+                </div>
+
+                <div className="input-row-3">
+
+                    <select name='role' required onChange={handleChange}
+                        onBlur={handleBlur}>
+                        <option value="" disabled selected>Role Applying For</option>
+                        <option value="educator">Educator</option>
+                        <option value="mentor">Mentor</option>
+                        <option value="counselor">Counselor</option>
+                    </select>
+
+                </div>
+                {Errors.role && <span className="error">{Errors.role}</span>}
+
+                <div className="input-row-4">
+                    <textarea placeholder="Qualification/Bio" rows="1" name='bio' required onChange={handleChange}
+                        onBlur={handleBlur} />
+                </div>
+                {Errors.bio && <span className="error">{Errors.bio}</span>}
+                <div className="input-row-5">
+                    <div className="input-col">
+                        <label>Upload Resume/CV</label>
                         <input
-                            name='phone'
-                            type='text'
-                            placeholder='Phone Number'
-                            onChange={handleChange}
+                            type="file"
+                            name="resume"
+                            accept="application/pdf" onChange={handleChange}
                             onBlur={handleBlur}
                         />
-                        {Errors.phone && <span className="error">{Errors.phone}</span>}
-
-                        <div className='dropdown'>
-                            <label>Role Applying For</label>
-                            <select
-                                name='role'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                            >
-                                <option value="">-- Select Role --</option>
-                                <option value="educator">Educator</option>
-                                <option value="mentor">Mentor</option>
-                                <option value="counselor">Counselor</option>
-                            </select>
-
-                        </div>
-                        {Errors.role && <span className="error">{Errors.role}</span>}
-                        <div className='bio'>
-                            <label>Your Qualification/Bio</label>
-                            <textarea
-                                name='bio'
-                                rows="2"
-                                placeholder="Enter your qualification details"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                            />
-
-                        </div>
-                        {Errors.bio && <span className="error">{Errors.bio}</span>}
-
-                        <div className='resume'>
-                            <label>Upload Resume/CV</label>
-                            <div className='resume-input'>
-                                <input
-                                    type='file'
-                                    name='resume'
-                                    accept='application/pdf'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                />
-
-                            </div>
-                        </div>
                         {Errors.resume && <span className="error">{Errors.resume}</span>}
+                    </div>
 
-                        <div className="certifications">
-                            <label>Upload Certifications</label>
-                            <div className='certification-input'>
-                                <input
-                                    type='file'
-                                    accept=".pdf,.png,.jpg,.jpeg"
-                                    name='certifications'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                />
-
-                            </div>
-                        </div>
+                    <div className="input-col">
+                        <label>Upload Certifications</label>
+                        <input
+                            type="file"
+                            name="certifications"
+                            accept=".pdf,.png,.jpg,.jpeg" onChange={handleChange}
+                            onBlur={handleBlur}
+                        />
                         {Errors.certifications && <span className="error">{Errors.certifications}</span>}
-
-                        <div className="identity">
-                            <label>Upload ID/Personal Identification</label>
-                            <div className='id-card-input'>
-                                <input
-                                    type='file'
-                                    accept=".pdf,.png,.jpg,.jpeg"
-                                    name='identity'
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                />
-
-                            </div>
-                        </div>
-                        {Errors.identity && <span className="error">{Errors.identity}</span>}
-
-                        <div className='have-account'>
-                            Already Have An Account? <span>Login In</span>
-                        </div>
-
-                        <button type="submit" className='btn'>Sign Up</button>
                     </div>
                 </div>
 
-                <div className="right-pic">
-                    <img src={educatorImg} alt="Educator" />
+                <div className="input-row-6">
+                    <label>Upload ID/Personal Identification</label>
+                    <div className="row-6-input">
+                        <input
+                            type='file'
+                            accept=".pdf,.png,.jpg,.jpeg"
+                            name='identity'
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                        />
+                        {Errors.identity && <span className="error">{Errors.identity}</span>}
+                    </div>
+
                 </div>
+
+                <div className='have-account'>
+                    Already Have An Account?<span>Login In</span>
+                </div>
+
+                <div className="btn">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+
+            <div className="form-img">
+                <img src={image} alt="Form illustration" />
             </div>
-        </form>
+
+        </div>
     )
 }
 
-export default SignUpForm;
+export default SignupForm
